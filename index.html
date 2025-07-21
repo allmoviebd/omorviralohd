@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Omor On Fire HD Link Viral</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #4361ee;
+      --secondary: #3f37c9;
+      --accent: #4895ef;
+      --dark: #1b263b;
+      --light: #f8f9fa;
+      --success: #4cc9f0;
+      --danger: #f72585;
+      --warning: #f8961e;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      font-family: 'Segoe UI', 'Roboto', sans-serif;
+      color: var(--dark);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 800px;
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: var(--dark);
+      background: linear-gradient(to right, var(--primary), var(--danger));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: slideInDown 0.8s ease-out;
+    }
+
+    .header p {
+      font-size: 1.1rem;
+      color: #666;
+      animation: fadeIn 1s ease-out;
+    }
+
+    .poster-container {
+      width: 100%;
+      max-width: 800px;
+      aspect-ratio: 16 / 9;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #fff;
+      margin-bottom: 40px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: scaleIn 0.8s ease-out;
+    }
+
+    .poster-container:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+    }
+
+    .poster-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .poster-container:hover img {
+      transform: scale(1.03);
+    }
+
+    .quality-badge {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      backdrop-filter: blur(5px);
+      z-index: 2;
+    }
+
+    .button-container {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .download-btn {
+      padding: 16px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .download-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: 0.5s;
+    }
+
+    .download-btn:hover::before {
+      left: 100%;
+    }
+
+    .download-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .download-btn:active {
+      transform: translateY(1px);
+    }
+
+    .btn-360 { background: linear-gradient(135deg, #007bff, #00b4d8); }
+    .btn-480 { background: linear-gradient(135deg, #6f42c1, #b5179e); }
+    .btn-720 { background: linear-gradient(135deg, #28a745, #38b000); }
+    .btn-1080 { background: linear-gradient(135deg, #fd7e14, #f8961e); }
+    .btn-fullhd { background: linear-gradient(135deg, #dc3545, #f72585); }.footer {
+      text-align: center;
+      margin-top: 30px;
+      color: #666;
+      font-size: 0.9rem;
+      animation: fadeIn 1.5s ease-out;
+    }
+
+    .loading-bar {
+      height: 4px;
+      width: 0;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      position: fixed;
+      top: 0;
+      left: 0;
+      animation: loading 2s ease-in-out infinite;
+      z-index: 1000;
+    }
+
+    @keyframes loading {
+      0% { width: 0; left: 0; }
+      50% { width: 100%; left: 0; }
+      100% { width: 0; left: 100%; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideInDown {
+      from {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes scaleIn {
+      from {
+        transform: scale(0.9);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header h1 {
+        font-size: 2rem;
+      }
+
+      .button-container {
+        grid-template-columns: 1fr;
+      }
+
+      .download-btn {
+        padding: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .header h1 {
+        font-size: 1.8rem;
+      }
+
+      .poster-container {
+        border-radius: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+<!--  <div class="loading-bar"></div> -->
+
+  <div class="container">
+    <div class="header">
+      <h1>HD Video Downloads</h1>
+      <p></p>
+    </div>
+
+    <!-- Poster Image -->
+    <div  class="poster-container">
+      <span class="quality-badge">4K Available</span>
+      <img  src="https://qargtkwafzrrzrfglhro.supabase.co/storage/v1/object/public/posters//Picsart_25-07-21_07-47-14-035.jpg" alt="Featured Content" />
+    </div>
+    
+    
+    <script type="text/javascript">
+	atOptions = {
+		'key' : '8509910faab6c32895a459eefb7c5097',
+		'format' : 'iframe',
+		'height' : 50,
+		'width' : 320,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/8509910faab6c32895a459eefb7c5097/invoke.js"></script>
+
+    <!-- Download Buttons -->
+<div class="button-container">
+  <button class="download-btn btn-360" 
+    onclick="animateDownload('360p', 'https://www.profitableratecpm.com/n2bbfksy?key=145b899398d50c5901a2b771d4761fd8')">
+    <i class="fas fa-download"></i> 360p (Small)
+  </button>
+  
+  <button class="download-btn btn-480" 
+    onclick="animateDownload('480p', 'https://www.profitableratecpm.com/yvirhxv40?key=216077dc7dc2764179088d720a5936ac')">
+    <i class="fas fa-download"></i> 480p (Medium)
+  </button>
+  
+  <button class="download-btn btn-720" 
+    onclick="animateDownload('720p', 'https://www.profitableratecpm.com/kp24nkp9?key=08afe49e05a7c3ae427b7ad177f12632')">
+    <i class="fas fa-download"></i> 720p (HD)
+  </button>
+  
+  <button class="download-btn btn-1080" 
+    onclick="animateDownload('1080p', 'https://t.me/viralvideofreehd/3')">
+    <i class="fas fa-download"></i> 1080p (Full HD)
+  </button>
+  
+  <button class="download-btn btn-fullhd" 
+    onclick="animateDownload('4K', 'https://www.profitableratecpm.com/ka2w3bej?key=a3ca245277203a988e7647873b233500')">
+    <i class="fas fa-download"></i> 4K (Ultra HD)
+  </button>
+</div>
+
+    <div class="footer">
+      <h2>Join To Our <a href="https://t.me/viralvideofreehd" style="color: white; background: blue;" >
+         Telegram
+      </a> For More Video</h2>
+    </div>
+  </div>
+
+<script async="async" data-cfasync="false" src="//pl26771562.profitableratecpm.com/9bebb29083323f6558c218a172644d41/invoke.js"></script>
+<div id="container-9bebb29083323f6558c218a172644d41"></div>
+
+
+<script type='text/javascript' src='//pl26771535.profitableratecpm.com/21/c4/ce/21c4ce1051a0b28c22700e45f599ea2b.js'></script>
+
+
+
+
+<script>
+  function animateDownload(quality, link) {
+    const buttons = document.querySelectorAll('.download-btn');
+    buttons.forEach(btn => {
+      btn.disabled = true;
+      btn.style.opacity = '0.6';
+    });
+
+    const clickedBtn = event.currentTarget;
+    clickedBtn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Preparing ${quality}...`;
+    clickedBtn.style.transform = 'scale(0.98)';
+
+    // Simulate download preparation
+    setTimeout(() => {
+      clickedBtn.innerHTML = `<i class="fas fa-check"></i> ${quality} Ready!`;
+      setTimeout(() => {
+        window.location.href = link; // আলাদা আলাদা লিংকে যাবে
+      }, 800);
+    }, 1500);
+  }
+</script>
+</body>
+</html>
